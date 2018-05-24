@@ -1,0 +1,50 @@
+<header>
+
+    <!--Navbar-->
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+       
+        <links>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active waves-light" mdbWavesEffect>
+                    <a class="black-text nav-link" href="#"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect>
+                    <a class="black-text nav-link" href="/about"><strong>About</strong></a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect>
+                    <a class="black-text nav-link" href="/contact"><strong>Contact Us</strong></a>
+                </li>
+            </ul>
+            <form class="form-inline waves-light" mdbWavesEffect>
+                <div class="black-text md-form mt-0">
+                    <input class=" form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+        </links>
+    </mdb-navbar>
+
+    <!--Intro Section-->
+    <section class="view intro-2">
+        <div class="full-bg-img mask rgba-stylish-strong">
+            <h3 class="white-text h3 font-weight-bold text-center pt-4">Easy Property Management</h3>
+            <div  class="container flex-center">
+                <div  *ngFor="let prop of properties" class="col-lg-4 col-md-12 mb-4">
+                    <div class="card card-cascade narrower">
+                        <!--Card image-->
+                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/82.jpg" alt="Card image cap">
+                    
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">{{ prop.name }}</h4>
+                            <!--Text-->
+                            <p class="card-text">{{ prop.address }}</p>
+                            <a [href]="'/units/' + prop._id" class="btn btn-pink btn-rounded btn-md waves-light" mdbWavesEffect>Show Units</a>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</header>

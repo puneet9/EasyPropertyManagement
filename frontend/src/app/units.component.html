@@ -1,0 +1,52 @@
+
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-light grey sticky-top scrolling-navbar">
+        
+        <links>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item waves-light" mdbWavesEffect>
+                    <a class="black-text nav-link" href="#"><strong>Home</strong> </a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect>
+                    <a class="black-text nav-link" href="/about"><strong>About</strong></a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect>
+                    <a class="black-text nav-link" href="/contact"><strong>Contact Us</strong></a>
+                </li>
+             </ul>
+             <h3 style="margin-right:160px" class="white-text h3 font-weight-bold">Easy Property Management</h3>
+            <form class="form-inline waves-light" mdbWavesEffect>
+                <div class="black-text md-form mt-0">
+                    <input class=" form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+        </links>
+    </mdb-navbar>
+
+<ng-container *ngFor="let prop of properties">   
+    <h3 style="margin-top:20px;margin-bottom:20px;text-align: center;" *ngIf="prop._id==id"><strong>{{prop.name}} Units</strong></h3> 
+</ng-container>
+
+<table  class="table table-hover">
+    <thead>
+        <tr>
+        <th>#</th>
+        <th>Unit Number</th>
+        <th>Unit Floor</th>
+        <th>Unit Rent</th>
+        <th>Vacant</th>
+        </tr>
+    </thead>
+    <ng-container *ngFor="let prop of properties">
+    <tbody  *ngIf="prop._id==id">
+        
+        <tr *ngFor="let prop1 of prop.units; let i = index;">
+        <th scope="row">{{i+1}}</th>
+        <td>{{prop1.number}}</td>
+        <td>{{prop1.floor}}</td>
+        <td>{{prop1.rent}}</td>
+        <td></td>
+        </tr>
+
+    </tbody>
+</ng-container>
+</table>
