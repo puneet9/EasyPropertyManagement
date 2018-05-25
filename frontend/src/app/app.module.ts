@@ -7,6 +7,8 @@ import { PropertiesComponent } from './properties.component';
 import { UnitComponent } from './units.component';
 import { AboutComponent } from './about.component';
 import { ContactComponent } from './contact.component';
+import { LoginComponent } from './login.component';
+import { RegisterComponent } from './register.component';
 import { routing } from './app.routing';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -16,7 +18,9 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     PropertiesComponent,
     UnitComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

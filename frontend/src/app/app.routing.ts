@@ -5,10 +5,20 @@ import { PropertiesComponent } from './properties.component';
 import { UnitComponent } from './units.component';
 import { AboutComponent } from './about.component';
 import { ContactComponent } from './contact.component';
+import { LoginComponent } from './login.component';
+import { RegisterComponent } from './register.component';
 
 const appRoutes: Routes = [
     {
         path:'',
+        component: LoginComponent
+    },
+    {
+        path:'register',
+        component: RegisterComponent
+    },
+    {
+        path:'properties',
         component: PropertiesComponent
     },
     {

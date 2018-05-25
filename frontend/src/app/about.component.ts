@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <links>
           <ul class="navbar-nav mr-auto">
               <li class="nav-item waves-light" mdbWavesEffect>
-                  <a class="black-text nav-link" href="#"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+                  <a class="black-text nav-link" href="/properties"><strong>Home</strong> <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active waves-light" mdbWavesEffect>
                   <a class="black-text nav-link" href="/about"><strong>About</strong></a>
